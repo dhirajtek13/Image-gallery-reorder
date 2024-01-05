@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "src": "./images/white_car.jpg",
+    "alt": "Image 1",
+    "tags": ["car", "white"]
+  },
+  {
+    "id": 2,
+    "src": "./images/white_travel.jpg",
+    "alt": "Image 2",
+    "tags": ["white", "travel"]
+  },
+  {
+    "id": 3,
+    "src": "./images/race_pongal.jpg",
+    "alt": "Image 2",
+    "tags": ["race"]
+  },
+  {
+    "id": 4,
+    "src": "/images/car2.jpg",
+    "alt": "Image 2",
+    "tags": ["car"]
+  },
+  {
+    "id": 5,
+    "src": "/images/animal1.jpg",
+    "alt": "Image 2",
+    "tags": ["animal"]
+  },
+  {
+    "id": 6,
+    "src": "/images/animal2.jpg",
+    "alt": "Image 2",
+    "tags": ["animal"]
+  },
+  {
+    "id": 7,
+    "src": "/images/car_race.jpg",
+    "alt": "Image 2",
+    "tags": ["car", "race"]
+  },
+  {
+    "id": 8,
+    "src": "/images/animal_race.jpg",
+    "alt": "Image 2",
+    "tags": ["animal", "race"]
+  },
+  {
+    "id": 9,
+    "src": "/images/animal4.jpg",
+    "alt": "Image 2",
+    "tags": ["animal"]
+  },
+  {
+    "id": 10,
+    "src":  "/images/car_travel.jpg",
+    "alt": "Image 2",
+    "tags": ["car","travel"]
+  },
+  {
+    "id": 11,
+    "src":"./images/white_monks.jpg",
+    "alt": "Image 2",
+    "tags": ["white", "travel"]
+  },
+  {
+    "id": 12,
+    "src": "/images/car_animal.jpg",
+    "alt": "Image 2",
+    "tags": ["car", "animal"]
+  },
+  {
+    "id": 13,
+    "src": "/images/car_animal_race.jpg",
+    "alt": "Image 2",
+    "tags": ["car", "animal","race"]
+  },
+  {
+    "id": 14,
+    "src": "./images/race.jpg",
+    "alt": "Image 2",
+    "tags": ["race"]
+  },
+  {
+    "id": 15,
+    "src": "./images/car_animal2.jpg",
+    "alt": "Image 2",
+    "tags": ["car", "animal"]
+  },
+  {
+    "id": 16,
+    "src": "./images/race_horse.jpg",
+    "alt": "Image 2",
+    "tags": ["race"]
+  }
+]
