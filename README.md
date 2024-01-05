@@ -7,4 +7,4 @@ To run the app.
 5) then to run on local run below command
     $npm start
 
-6) live deployed url:
+6) live deployed url: https://image-gallery-reorder.vercel.app/
