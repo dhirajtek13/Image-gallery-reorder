@@ -1,37 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import imageData from './imagesData.json';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-
-const Image = ({ image, index, moveImage }) => {
-  const [, ref] = useDrag({
-    type: 'IMAGE',
-    item: { index },
-  });
-
-  const [, drop] = useDrop({
-    accept: 'IMAGE',
-    hover: (draggedItem) => {
-      if (draggedItem.index !== index) {
-        moveImage(draggedItem.index, index);
-        draggedItem.index = index;
-      }
-    },
-  });
-
-  return (
-    <div ref={(node) => ref(drop(node))} className="image-container">
-      <img src={image.src} alt={image.alt} />
-      <div className="tags">
-        {image.tags && image.tags.map((tag, index) => (
-          <span key={index} className="tag">{tag}</span>
-        ))}
-      </div>
-    </div>
-  );
-};
+import imageData from './imagesData.json';
+import Header from './components/Header';
+import Breadcrumb from './components/Breadcrumb';
+import TagButton from './components/TagButton';
+import ImageGrid from './components/ImageGrid';
+import ResetButton from './components/ResetButton';
 
 
 const App = () => {
@@ -83,29 +60,21 @@ const App = () => {
   return (
     <DndProvider backend={HTML5Backend}>
     <div className="App">
-      <header>
-        <h1>Gallery</h1>
-      </header>
-      <div className="breadcrumb">
-        <p>Pages -  Gallery</p>
-      </div>
+    <Header />
+    <Breadcrumb />
       <h1>Photo Gallery</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+    
       <div className="tag-buttons">
-        <button className="reset" onClick={resetOrder}>Reset</button>
-        <button className={activeTag === 'all' ? 'active' : ''} onClick={() => filterImages('all')}>All</button>
-        {tags.map((tag) => (
-          <button className={activeTag === tag ? 'active tagname' : 'tagname'}  key={tag} onClick={() => filterImages(tag)}>
-            {tag}
-          </button>
-        ))}
+          <ResetButton onClick={resetOrder} />
+          <TagButton tag="all" isActive={activeTag === 'all' && 'active'}  onClick={() => filterImages('all')} />
+          {tags.map((tag) => (
+            <TagButton tag={tag} isActive={activeTag === tag && 'active'}  onClick={() => filterImages(tag)} />
+          ))}
 
-      </div>
-      <div className="image-grid">
-        {images.map((image, index) => (
-          <Image key={image.id} image={image} index={index} moveImage={moveImage} />
-        ))}
-      </div>
+        </div>
+
+      <ImageGrid images={images} moveImage={moveImage} />
     </div>
     </DndProvider>
   );
