@@ -34,7 +34,7 @@ const App = () => {
     if (selectedTag === "all") {
       setImages(imageData);
     } else {
-      const filteredImages = images.filter(
+      const filteredImages = imageData.filter(
         (image) => image.tags && image.tags.includes(selectedTag)
       );
       setImages(filteredImages);
