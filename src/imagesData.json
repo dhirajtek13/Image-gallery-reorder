@@ -4,7 +4,7 @@
     "src": "./images/white_car.jpg",
     "alt": "Image 1",
     "tags": ["car", "white"],
-    "order": 1
+    "order": 11
   },
   {
     "id": 2,
@@ -74,7 +74,7 @@
     "src": "./images/white_monks.jpg",
     "alt": "Image 2",
     "tags": ["white", "travel"],
-    "order": 11
+    "order": 1
   },
   {
     "id": 12,

@@ -34,7 +34,7 @@ const App = () => {
     if (selectedTag === "all") {
       setImages(imageData);
     } else {
-      const filteredImages = imageData.filter(
+      const filteredImages = images.filter(
         (image) => image.tags && image.tags.includes(selectedTag)
       );
       setImages(filteredImages);
@@ -70,9 +70,10 @@ const App = () => {
             isActive={activeTag === "all" && "active"}
             onClick={() => filterImages("all")}
           />
-          {tags.map((tag) => (
+          {tags.map((tag, i) => (
             <TagButton
               tag={tag}
+              key={i}
               isActive={activeTag === tag && "active"}
               onClick={() => filterImages(tag)}
             />
